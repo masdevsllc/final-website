@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { XCircle, CheckCircle2 } from 'lucide-react';
 import { siteConfig } from '../siteConfig';
@@ -60,9 +59,11 @@ export const QuizModal: React.FC<QuizModalProps> = ({ onClose, onAuditClaim }) =
             </div>
             <h3 className="text-3xl font-black mb-4 uppercase italic tracking-tight">{quiz.title}</h3>
             <p className="text-xl text-white/70 mb-12 font-medium">{quiz.subheadline}</p>
-            <PrimaryButton onClick={onAuditClaim}>
-              {quiz.ctaText}
-            </PrimaryButton>
+            <div className="flex justify-center">
+              <PrimaryButton onClick={onAuditClaim}>
+                {quiz.ctaText}
+              </PrimaryButton>
+            </div>
           </div>
         )}
       </div>
