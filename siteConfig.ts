@@ -26,7 +26,7 @@ export const siteConfig: SiteConfig = {
     eyebrow: "Trusted by SMBs in Law, Real Estate, Healthcare & Home Services",
     headline: "Stop Losing High-Value Leads and Increase Revenue by 35%+ Using AI Automation — Without Hiring More Staff",
     subheadline: "Stop using broken CRMs, slow follow-ups, and manual admin work. Start using AI-powered systems that respond instantly, nurture leads, and book appointments 24/7.",
-    ctaText: "Book Free Strategy Call (No Credit Card Required)",
+    ctaText: "Book Free Strategy Call",
     socialProofText: "Rated by Growing Businesses"
   },
   problem: {
@@ -144,7 +144,7 @@ export const siteConfig: SiteConfig = {
   quiz: {
     title: "Calculation Complete!",
     subheadline: "Your \"Leaky Bucket\" Score suggests an immediate 28-42% revenue increase is possible.",
-    ctaText: "Claim My Free Audit Result",
+    ctaText: "Book Free Strategy Call",
     questions: [
       { id: 1, question: "How many leads do you typically receive per month?", options: ["0-20", "21-50", "51-150", "150+"] },
       { id: 2, question: "What's your current speed-to-lead?", options: ["Under 5 mins", "1 hour", "Next day", "Whenever we can"] },
