@@ -10,7 +10,7 @@ export const siteConfig: SiteConfig = {
     name: "MasDevs LLC",
     firstName: "MAS",
     lastName: "DEVS",
-    logoUrl: "https://drive.google.com/uc?id=17zhWLrmG2nnqszf9E_dGeK1mdE-MgDai",
+    logoUrl: "https://iili.io/qJfKdDG.png",
     faviconUrl: "https://drive.google.com/uc?id=17zhWLrmG2nnqszf9E_dGeK1mdE-MgDai",
     ceo: "Waqas Ahmed",
     location: "Missouri, USA"
