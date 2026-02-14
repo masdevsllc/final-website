@@ -3,13 +3,15 @@ import { SiteConfig } from './types';
 
 /**
  * CENTRAL SITE CONFIGURATION
- * All content, headlines, and feature lists are managed here.
+ * All content, headlines, and branding assets are managed here.
  */
 export const siteConfig: SiteConfig = {
   brand: {
     name: "MasDevs LLC",
     firstName: "MAS",
     lastName: "DEVS",
+    logoUrl: "https://drive.google.com/uc?id=17zhWLrmG2nnqszf9E_dGeK1mdE-MgDai",
+    faviconUrl: "https://drive.google.com/uc?id=17zhWLrmG2nnqszf9E_dGeK1mdE-MgDai",
     ceo: "Waqas Ahmed",
     location: "Missouri, USA"
   },
@@ -45,48 +47,12 @@ export const siteConfig: SiteConfig = {
     headline: "Industries We Scale",
     subheadline: "If your business depends on leads and appointments, MasDevs is engineered to dominate your market.",
     items: [
-      {
-        title: "Personal Injury Lawyers",
-        tag: "24/7 INTAKE",
-        description: "Instant qualification for accident leads before they call the next firm on the list.",
-        impactValue: "Never miss high-value accident cases.",
-        icon: "⚖️"
-      },
-      {
-        title: "Real Estate Agents",
-        tag: "DATABASE REACTIVATION",
-        description: "Automated nurturing to turn 'dead' leads into active listings and signed contracts.",
-        impactValue: "12+ fresh listings from old leads.",
-        icon: "🏡"
-      },
-      {
-        title: "Dental & Med Spas",
-        tag: "NO-SHOW REDUCTION",
-        description: "Fill your calendar with automated reminders and instant rescheduling confirmations.",
-        impactValue: "60% reduction in average no-shows.",
-        icon: "💉"
-      },
-      {
-        title: "HVAC & Roofing",
-        tag: "PRE-QUALIFICATION",
-        description: "AI identifies high-intent jobs so your team stops driving to junk appointments.",
-        impactValue: "Save 40+ field hours per week.",
-        icon: "🛠️"
-      },
-      {
-        title: "Insurance Agencies",
-        tag: "POLICY FOLLOW-UPS",
-        description: "Reactivate old leads and automate renewals to increase lifetime customer value.",
-        impactValue: "Double policy renewal rates automated.",
-        icon: "🛡️"
-      },
-      {
-        title: "Cleaning Companies",
-        tag: "INSTANT BOOKING",
-        description: "Respond to inquiries and book jobs instantly with automated scheduling workflows.",
-        impactValue: "100% autonomous dispatch management.",
-        icon: "🧹"
-      }
+      { title: "Personal Injury Lawyers", tag: "24/7 INTAKE", description: "Instant qualification for accident leads before they call the next firm.", impactValue: "Never miss high-value accident cases.", icon: "⚖️" },
+      { title: "Real Estate Agents", tag: "DATABASE REACTIVATION", description: "Automated nurturing to turn 'dead' leads into active listings.", impactValue: "12+ fresh listings from old leads.", icon: "🏡" },
+      { title: "Dental & Med Spas", tag: "NO-SHOW REDUCTION", description: "Fill your calendar with automated reminders and instant rescheduling.", impactValue: "60% reduction in average no-shows.", icon: "💉" },
+      { title: "HVAC & Roofing", tag: "PRE-QUALIFICATION", description: "AI identifies high-intent jobs so your team stops driving to junk appointments.", impactValue: "Save 40+ field hours per week.", icon: "🛠️" },
+      { title: "Insurance Agencies", tag: "POLICY FOLLOW-UPS", description: "Reactivate old leads and automate renewals to increase lifetime value.", impactValue: "Double policy renewal rates automated.", icon: "🛡️" },
+      { title: "Cleaning Companies", tag: "INSTANT BOOKING", description: "Respond to inquiries and book jobs instantly with automated workflows.", impactValue: "100% autonomous dispatch management.", icon: "🧹" }
     ]
   },
   valueProps: {
@@ -151,7 +117,7 @@ export const siteConfig: SiteConfig = {
     testimonials: [
       { name: "James R.", niche: "Personal Injury Attorney", quote: "We were losing almost 30% of our leads because staff couldn't answer at night. MasDevs deployed an AI Intake Agent and now we book consultations 24/7. Game changer!" },
       { name: "Sarah M.", niche: "Real Estate Broker", quote: "The database reactivation turned 500 dead leads into 12 fresh listings in just 10 days. The ROI was instant." },
-      { name: "Dr. Linda K.", niche: "Aesthetic Clinic Owner", quote: "Our no-show rate dropped by 60% since using automated AI reminders. It's like having an extra receptionist who never sleeps." },
+      { name: "Dr. Linda K.", niche: "Aesthetic Clinic", quote: "Our no-show rate dropped by 60% since using automated AI reminders. It's like having an extra receptionist who never sleeps." },
       { name: "Mark T.", niche: "HVAC CEO", quote: "MasDevs built a system that qualifies our leads before my guys even get in the truck. We've saved countless hours of driving to junk leads." }
     ]
   },

@@ -1,45 +1,30 @@
 
 import React from 'react';
 
-/**
- * Interface for a single testimonial card.
- */
 export interface Testimonial {
   name: string;
   niche: string;
   quote: string;
 }
 
-/**
- * Interface for a value proposition or benefit item.
- */
 export interface ValueProp {
   title: string;
   description: string;
-  icon: string; // Key for ICON_MAP
+  icon: string; 
 }
 
-/**
- * Interface for a row in the comparison table.
- */
 export interface ComparisonRow {
   feature: string;
   typical: string;
   masdevs: string;
 }
 
-/**
- * Interface for a quiz question in the ROI calculator.
- */
 export interface QuizQuestion {
   id: number;
   question: string;
   options: string[];
 }
 
-/**
- * Interface for a target industry niche card.
- */
 export interface TargetNiche {
   title: string;
   tag: string;
@@ -48,25 +33,19 @@ export interface TargetNiche {
   icon: string | React.ReactNode;
 }
 
-/**
- * Interface for an AI system service item.
- */
 export interface AISystemService {
   title: string;
   description: string;
-  icon: string; // Key for ICON_MAP
+  icon: string;
 }
 
-/**
- * The root configuration object for the entire landing page.
- * Updating this object updates the site content globally.
- */
 export interface SiteConfig {
   brand: {
     name: string;
     firstName: string;
     lastName: string;
-    logoUrl?: string;
+    logoUrl: string;
+    faviconUrl: string;
     ceo: string;
     location: string;
   };
@@ -86,7 +65,7 @@ export interface SiteConfig {
     highlight: string;
     subheadline: string;
     items: {
-      icon: string; // Key for ICON_MAP
+      icon: string;
       title: string;
       desc: string;
       isSolution?: boolean;
@@ -140,7 +119,7 @@ export interface SiteConfig {
   };
   trust: {
     items: {
-      icon: string; // Key for ICON_MAP
+      icon: string;
       text: string;
     }[];
     guarantee: {
