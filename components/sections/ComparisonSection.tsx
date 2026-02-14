@@ -94,9 +94,9 @@ export const ComparisonSection: React.FC = () => {
             </div>
           </div>
           
-          {/* Mobile Swipe Indicator Overlay - Centered and padded correctly */}
-          <div className="md:hidden flex justify-center w-full mt-4">
-            <div className="flex items-center gap-3 py-3 px-6 bg-white/5 backdrop-blur-xl rounded-full border border-white/10 shadow-xl animate-pulse">
+          {/* Mobile Swipe Indicator Overlay - Guaranteed Centering */}
+          <div className="md:hidden relative w-full h-12 flex justify-center items-center mt-4">
+            <div className="flex items-center gap-3 py-3 px-6 bg-white/10 backdrop-blur-xl rounded-full border border-white/10 shadow-xl animate-pulse">
               <ArrowRightLeft size={14} className="text-[#30f797]" />
               <span className="text-[#30f797] text-[10px] font-black uppercase tracking-[0.25em] whitespace-nowrap">Swipe to Compare</span>
             </div>

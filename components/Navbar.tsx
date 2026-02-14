@@ -54,10 +54,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onScrollTo }) => {
           ))}
         </div>
 
-        {/* CTA Button - Optimized for mobile width */}
+        {/* CTA Button - Refined sizing for mobile balance */}
         <button 
           onClick={() => onScrollTo('final-cta')}
-          className="bg-[#30f797] text-[#121420] px-4 md:px-6 py-2 md:py-2.5 rounded-full text-[10px] md:text-[11px] font-black uppercase tracking-widest hover:scale-105 transition-all shadow-[0_0_20px_rgba(48,247,151,0.3)] active:scale-95 shrink-0"
+          className="bg-[#30f797] text-[#121420] px-3.5 py-1.5 md:px-6 md:py-2.5 rounded-full text-[9px] md:text-[11px] font-black uppercase tracking-widest hover:scale-105 transition-all shadow-[0_0_20px_rgba(48,247,151,0.3)] active:scale-95 shrink-0"
         >
           <span className="md:hidden">{mobileCtaText}</span>
           <span className="hidden md:inline">{shortCtaText}</span>

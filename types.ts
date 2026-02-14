@@ -76,8 +76,7 @@ export interface SiteConfig {
   }[];
   hero: {
     eyebrow: string;
-    headlinePart1: string;
-    headlinePart2: string;
+    headline: string;
     subheadline: string;
     ctaText: string;
     socialProofText: string;

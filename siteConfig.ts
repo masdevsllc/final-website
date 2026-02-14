@@ -22,8 +22,7 @@ export const siteConfig: SiteConfig = {
   ],
   hero: {
     eyebrow: "Trusted by SMBs in Law, Real Estate, Healthcare & Home Services",
-    headlinePart1: "We Help Service Businesses",
-    headlinePart2: "Stop Losing High-Value Leads",
+    headline: "Stop Losing High-Value Leads and Increase Revenue by 35%+ Using AI Automation — Without Hiring More Staff",
     subheadline: "Stop using broken CRMs, slow follow-ups, and manual admin work. Start using AI-powered systems that respond instantly, nurture leads, and book appointments 24/7.",
     ctaText: "Book Free Strategy Call (No Credit Card Required)",
     socialProofText: "Rated by Growing Businesses"
