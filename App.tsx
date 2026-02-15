@@ -33,18 +33,31 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#121420] text-white selection:bg-[#30f797] selection:text-[#121420] relative">
-      <div 
-        className="fixed inset-0 opacity-[0.05] pointer-events-none z-0" 
-        style={{ 
-          backgroundImage: `linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)`, 
-          backgroundSize: '60px 60px' 
-        }}
-      ></div>
+    <div className="min-h-screen bg-[#0A0B14] text-white selection:bg-[#30f797] selection:text-[#121420] relative overflow-x-hidden">
+      {/* IMPROVED BACKGROUND SYSTEM */}
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        {/* Layer 1: Subtle Grain/Noise Texture */}
+        <div className="absolute inset-0 noise-bg opacity-[0.03]"></div>
+        
+        {/* Layer 2: Drifting Atmospheric Orbs */}
+        <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-[#30f797]/[0.07] rounded-full blur-[120px] animate-drift"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-600/[0.05] rounded-full blur-[120px] animate-drift-slow"></div>
+        
+        {/* Layer 3: Radial Masked Grid */}
+        <div 
+          className="absolute inset-0 opacity-[0.08]" 
+          style={{ 
+            backgroundImage: `linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)`, 
+            backgroundSize: '80px 80px',
+            maskImage: 'radial-gradient(circle at center, black 30%, transparent 80%)',
+            WebkitMaskImage: 'radial-gradient(circle at center, black 30%, transparent 80%)'
+          }}
+        ></div>
+      </div>
 
       <Navbar onScrollTo={scrollToId} />
 
-      <main>
+      <main className="relative z-10">
         <Hero onCtaClick={() => scrollToId('final-cta')} />
         <ProblemSection />
         <TargetNiches />
