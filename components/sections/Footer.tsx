@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Linkedin, Instagram, Facebook, MapPin, Globe } from 'lucide-react';
+import { Linkedin, Instagram, Facebook, MapPin, Globe, MessageCircle } from 'lucide-react';
 import { siteConfig } from '../../siteConfig';
 
 /**
@@ -36,9 +35,18 @@ export const Footer: React.FC = () => {
               Revolutionizing service businesses through autonomous AI operations and revenue infrastructure that works 24/7.
             </p>
             <div className="flex gap-5">
-              <a href="#" className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 hover:border-[#30f797] hover:text-[#30f797] transition-all"><Linkedin size={20} /></a>
-              <a href="#" className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 hover:border-[#30f797] hover:text-[#30f797] transition-all"><Instagram size={20} /></a>
-              <a href="#" className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 hover:border-[#30f797] hover:text-[#30f797] transition-all"><Facebook size={20} /></a>
+              <a href="#" className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 hover:border-[#30f797] hover:text-[#30f797] transition-all" aria-label="LinkedIn"><Linkedin size={20} /></a>
+              <a href="#" className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 hover:border-[#30f797] hover:text-[#30f797] transition-all" aria-label="Instagram"><Instagram size={20} /></a>
+              <a href="#" className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 hover:border-[#30f797] hover:text-[#30f797] transition-all" aria-label="Facebook"><Facebook size={20} /></a>
+              <a 
+                href="https://wa.me/+923075559805" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 hover:border-[#30f797] hover:text-[#30f797] transition-all text-[#30f797]/80 hover:text-[#30f797]"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle size={20} />
+              </a>
             </div>
           </div>
 
