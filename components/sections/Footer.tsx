@@ -1,9 +1,10 @@
+
 import React, { useState } from 'react';
 import { Linkedin, Instagram, Facebook, MapPin, Globe, MessageCircle } from 'lucide-react';
 import { siteConfig } from '../../siteConfig';
 
 /**
- * Footer - Professional SaaS footer pulling from siteConfig.
+ * Footer - Professional SaaS footer with neon accents and specific brand links.
  */
 export const Footer: React.FC = () => {
   const { brand, navigation } = siteConfig;
@@ -32,12 +33,12 @@ export const Footer: React.FC = () => {
               )}
             </div>
             <p className="text-white/40 text-base md:text-sm font-medium leading-relaxed max-w-sm mb-10">
-              Revolutionizing service businesses through autonomous AI operations and revenue infrastructure that works 24/7.
+              Specializing in AI Marketing Automation that turns inquiries into booked appointments automatically for service-based businesses.
             </p>
             <div className="flex gap-5">
-              <a href="#" className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 hover:border-[#30f797] hover:text-[#30f797] transition-all" aria-label="LinkedIn"><Linkedin size={20} /></a>
-              <a href="#" className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 hover:border-[#30f797] hover:text-[#30f797] transition-all" aria-label="Instagram"><Instagram size={20} /></a>
-              <a href="#" className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 hover:border-[#30f797] hover:text-[#30f797] transition-all" aria-label="Facebook"><Facebook size={20} /></a>
+              <a href="https://www.linkedin.com/company/masdevs" target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 hover:border-[#30f797] hover:text-[#30f797] transition-all" aria-label="LinkedIn"><Linkedin size={20} /></a>
+              <a href="https://www.instagram.com/masdevs.official/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 hover:border-[#30f797] hover:text-[#30f797] transition-all" aria-label="Instagram"><Instagram size={20} /></a>
+              <a href="https://www.facebook.com/masdevs.official/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 hover:border-[#30f797] hover:text-[#30f797] transition-all" aria-label="Facebook"><Facebook size={20} /></a>
               <a 
                 href="https://wa.me/+923075559805" 
                 target="_blank" 
@@ -94,7 +95,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-wrap items-center justify-center gap-6 text-white/10 text-[10px] font-black uppercase tracking-[0.2em] italic">
             <span>Powered by GPT-4o</span>
             <span className="hidden sm:block w-1.5 h-1.5 rounded-full bg-white/10"></span>
-            <span>n8n Integration</span>
+            <span>AI Marketing Automation</span>
           </div>
         </div>
       </div>

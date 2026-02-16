@@ -14,13 +14,12 @@ interface PrimaryButtonProps {
 
 /**
  * PrimaryButton - Standardized neon green CTA button.
- * Responsively sized for both desktop and mobile.
  */
 export const PrimaryButton: React.FC<PrimaryButtonProps> = ({ 
   onClick, 
   children, 
   className = "", 
-  subText = "(NO CREDIT CARD REQUIRED)" 
+  subText = "Takes only 15 minutes • Free audit of your lead flow" 
 }) => (
   <button 
     onClick={onClick}
@@ -28,7 +27,7 @@ export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
   >
     <span className="text-sm md:text-2xl font-black tracking-tight leading-tight uppercase">{children}</span>
     {subText && (
-      <span className="text-[7px] md:text-[11px] font-black uppercase tracking-[0.15em] md:tracking-[0.2em] opacity-80">{subText}</span>
+      <span className="text-[7px] md:text-[10px] font-black uppercase tracking-[0.1em] md:tracking-[0.15em] opacity-80">{subText}</span>
     )}
   </button>
 );

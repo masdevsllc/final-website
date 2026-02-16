@@ -16,11 +16,10 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
   const { hero } = siteConfig;
 
-  // Split the headline for styling while preserving the exact string flow
-  // Stop Losing High-Value Leads and Increase Revenue by 35%+ Using AI Automation — Without Hiring More Staff
-  const headPrefix = "Stop Losing High-Value Leads and ";
-  const headHighlight = "Increase Revenue by 35%+";
-  const headSuffix = " Using AI Automation — Without Hiring More Staff";
+  // Headline Refined: Stop Losing High-Value Leads. Increase Booked Appointments by up to 35% with AI Marketing Automation.
+  const headPrefix = "Stop Losing High-Value Leads. ";
+  const headHighlight = "Increase Booked Appointments by up to 35%";
+  const headSuffix = " with AI Marketing Automation.";
 
   return (
     <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 px-6 overflow-hidden min-h-screen flex flex-col justify-center z-10">
@@ -48,6 +47,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
         {/* Headline */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black leading-[1.2] md:leading-[1.1] tracking-tighter mb-6 md:mb-10 px-2 max-w-6xl mx-auto">
           <span className="opacity-90">{headPrefix}</span>
+          <br className="hidden lg:block" />
           <span className="text-[#30f797]">{headHighlight}</span>
           <span className="opacity-90">{headSuffix}</span>
         </h1>

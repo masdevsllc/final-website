@@ -64,6 +64,10 @@ export interface SiteConfig {
     headline: string;
     highlight: string;
     subheadline: string;
+    statCallout?: {
+      stat: string;
+      subtext: string;
+    };
     items: {
       icon: string;
       title: string;
