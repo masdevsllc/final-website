@@ -10,19 +10,16 @@ import { QuizModal } from './components/QuizModal';
 import { Hero } from './components/sections/Hero';
 import { ProblemSection } from './components/sections/ProblemSection';
 import { TargetNiches } from './components/TargetNiches';
-import { AISystemsSection } from './components/sections/AISystemsSection';
-import { TechStackSection } from './components/sections/TechStackSection';
 import { ComparisonSection } from './components/sections/ComparisonSection';
 import { HowItWorksSection } from './components/sections/HowItWorksSection';
 import { ResultsSection } from './components/sections/ResultsSection';
-import { TrustSection } from './components/sections/TrustSection';
+import { FAQSection } from './components/sections/FAQSection';
 import { FinalCTASection } from './components/sections/FinalCTASection';
 import { ValuePropsSection } from './components/sections/ValuePropsSection';
 import { Footer } from './components/sections/Footer';
 
 /**
- * LANDING PAGE ORCHESTRATOR
- * Optimized for mobile-first responsiveness and high-conversion flow.
+ * LANDING PAGE ORCHESTRATOR - Refined 2026 Structure
  */
 const App: React.FC = () => {
   const [showQuiz, setShowQuiz] = useState(false);
@@ -32,18 +29,18 @@ const App: React.FC = () => {
     el?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleCtaClick = () => {
+    // Lead to final CTA for conversion
+    scrollToId('final-cta');
+  };
+
   return (
     <div className="min-h-screen bg-[#0A0B14] text-white selection:bg-[#30f797] selection:text-[#121420] relative overflow-x-hidden">
-      {/* IMPROVED BACKGROUND SYSTEM */}
+      {/* ATMOSPHERIC BACKGROUND */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-        {/* Layer 1: Subtle Grain/Noise Texture */}
         <div className="absolute inset-0 noise-bg opacity-[0.03]"></div>
-        
-        {/* Layer 2: Drifting Atmospheric Orbs */}
         <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-[#30f797]/[0.07] rounded-full blur-[120px] animate-drift"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-600/[0.05] rounded-full blur-[120px] animate-drift-slow"></div>
-        
-        {/* Layer 3: Radial Masked Grid */}
         <div 
           className="absolute inset-0 opacity-[0.08]" 
           style={{ 
@@ -58,16 +55,31 @@ const App: React.FC = () => {
       <Navbar onScrollTo={scrollToId} />
 
       <main className="relative z-10">
-        <Hero onCtaClick={() => scrollToId('final-cta')} />
+        {/* 1. HERO */}
+        <Hero onCtaClick={handleCtaClick} />
+
+        {/* 2. THE PAIN SECTION */}
         <ProblemSection />
-        <TargetNiches />
-        <ValuePropsSection />
-        <AISystemsSection onCtaClick={() => scrollToId('final-cta')} />
-        <TechStackSection />
-        <ComparisonSection />
-        <HowItWorksSection />
+
+        {/* 3. THE WALL OF LOVE */}
         <ResultsSection />
-        <TrustSection />
+
+        {/* 4. THE SOLUTION (Value Props) */}
+        <ValuePropsSection />
+
+        {/* 5. TRANSFORMATION (Comparison) */}
+        <ComparisonSection />
+
+        {/* 6. HOW IT WORKS (4-Step) */}
+        <HowItWorksSection />
+        
+        {/* INDUSTRIES (Keep as context) */}
+        <TargetNiches />
+
+        {/* 7. THE SAFETY NET (FAQ) */}
+        <FAQSection />
+
+        {/* 8. THE CLOSER */}
         <FinalCTASection onCtaClick={() => window.location.href = 'https://calendar.app.google/7YC1Yj7sV6UBYwPh6'} />
       </main>
 
@@ -83,6 +95,7 @@ const App: React.FC = () => {
         />
       )}
 
+      {/* ROI Scoring Float */}
       <div className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-40">
         <button 
           onClick={() => setShowQuiz(true)} 
@@ -92,7 +105,7 @@ const App: React.FC = () => {
             Score
           </div>
           <span className="font-black text-[10px] md:text-xs uppercase tracking-[0.2em] text-white/80 hidden xs:inline">
-            Check ROI
+            Free ROI Audit
           </span>
           <ArrowRight className="w-3 h-3 md:w-4 md:h-4 text-white/20 group-hover:text-[#30f797] group-hover:translate-x-1 transition-all" />
         </button>

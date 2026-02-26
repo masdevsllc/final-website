@@ -23,18 +23,16 @@ export const QuizModal: React.FC<QuizModalProps> = ({ onClose, onAuditClaim }) =
 
   // Simple scoring logic: 
   // Each answer index (0-3) contributes to the "Leakage Score".
-  // Higher indices generally represent worse situations (e.g. "Whenever we can" for speed-to-lead).
   const scoreData = useMemo(() => {
     if (!finished) return { leakage: 0, opportunity: 0 };
     
     // Weighted points based on the quiz structure
-    // Speed to lead (Q2) and Reactivation (Q3) are high-impact
     const weights = [10, 30, 40, 20]; 
     const totalScore = answers.reduce((acc, curr, idx) => acc + (curr * weights[idx]), 0);
     
-    // Normalize to 0-100 range (Max possible is 3 * 100 = 300 points)
+    // Normalize to 0-100 range
     const normalizedLeakage = Math.min(Math.round((totalScore / 300) * 100), 98);
-    // Potential revenue increase (mock calculation based on leakage)
+    // Potential revenue increase
     const revenueOpportunity = Math.round(normalizedLeakage * 0.45 + 15);
 
     return { 
@@ -60,18 +58,24 @@ export const QuizModal: React.FC<QuizModalProps> = ({ onClose, onAuditClaim }) =
         {/* Background Accent */}
         <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#30f797]/5 rounded-full blur-[80px] pointer-events-none"></div>
         
-        <button onClick={onClose} className="absolute top-6 right-6 text-white/40 hover:text-white transition-colors z-20">
+        {/* Close Button - Positioned with distance */}
+        <button 
+          onClick={onClose} 
+          className="absolute top-8 right-8 md:top-10 md:right-10 text-white/40 hover:text-white transition-colors z-20"
+          aria-label="Close modal"
+        >
           <XCircle size={32} />
         </button>
 
         {!finished ? (
           <div className="relative z-10">
             <div className="mb-10">
-              <div className="flex justify-between items-end mb-4">
+              {/* Header Container - Added pr-12 to ensure progress text doesn't hit the close button */}
+              <div className="flex justify-between items-end mb-4 pr-12 md:pr-16">
                 <span className="text-[#30f797] font-black text-[10px] md:text-xs tracking-[0.3em] uppercase italic">
                   Analyzing Business Infrastructure
                 </span>
-                <span className="text-white/30 font-bold text-xs">
+                <span className="text-white/30 font-bold text-xs whitespace-nowrap">
                   {currentQuestion + 1} / {quiz.questions.length}
                 </span>
               </div>

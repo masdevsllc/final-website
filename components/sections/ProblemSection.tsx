@@ -55,7 +55,7 @@ export const ProblemSection: React.FC = () => {
               {problem.subheadline}
             </p>
             <div className="flex flex-col items-center gap-4 text-red-500/60 font-black uppercase tracking-widest text-[10px] md:text-xs italic bg-red-500/5 py-4 rounded-2xl border border-red-500/10">
-              <span>Agitate: Every missed call is a lost customer.</span>
+              <span>Every missed call is a lost customer.</span>
               <span className="w-1 h-1 rounded-full bg-red-500/30"></span>
               <span>Every late reply sends your lead to a competitor.</span>
             </div>
@@ -81,8 +81,11 @@ export const ProblemSection: React.FC = () => {
         </div>
 
         <div className="mt-20 text-center">
-            <p className="text-white/60 text-lg md:text-xl font-medium italic">
-              Stop paying for marketing while your <span className="text-white font-black italic underline decoration-[#30f797]">infrastructure is leaking money</span> every day.
+            <p className="text-white/60 text-lg md:text-xl font-medium italic mb-4">
+              You don’t need more ads.
+            </p>
+            <p className="text-white font-black text-xl md:text-3xl italic tracking-tight">
+              You need a system that <span className="text-[#30f797]">never forgets</span> and <span className="text-[#30f797]">never sleeps</span>.
             </p>
         </div>
       </div>

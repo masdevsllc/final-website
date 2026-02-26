@@ -5,12 +5,19 @@ export interface Testimonial {
   name: string;
   niche: string;
   quote: string;
+  resultBadge?: string;
+  avatar?: string;
+}
+
+export interface FAQItem {
+  question: string;
+  answer: string;
 }
 
 export interface ValueProp {
+  icon: string;
   title: string;
   description: string;
-  icon: string; 
 }
 
 export interface ComparisonRow {
@@ -33,10 +40,10 @@ export interface TargetNiche {
   icon: string | React.ReactNode;
 }
 
-export interface AISystemService {
+export interface HowItWorksStep {
+  step: string;
   title: string;
-  description: string;
-  icon: string;
+  desc: string;
 }
 
 export interface SiteConfig {
@@ -59,12 +66,13 @@ export interface SiteConfig {
     subheadline: string;
     ctaText: string;
     socialProofText: string;
+    trustLogos: string[];
   };
   problem: {
     headline: string;
     highlight: string;
     subheadline: string;
-    statCallout?: {
+    statCallout: {
       stat: string;
       subtext: string;
     };
@@ -87,10 +95,43 @@ export interface SiteConfig {
     subheadline: string;
     items: ValueProp[];
   };
+  howItWorks: {
+    title: string;
+    highlight: string;
+    steps: HowItWorksStep[];
+  };
+  results: {
+    title: string;
+    highlight: string;
+    testimonials: Testimonial[];
+  };
+  faqs: {
+    title: string;
+    items: FAQItem[];
+  };
+  finalCta: {
+    headline: string;
+    highlight: string;
+    subheadline: string;
+    ctaText: string;
+    slotsRemaining: number;
+    availabilityLabel: string;
+  };
+  quiz: {
+    title: string;
+    subheadline: string;
+    ctaText: string;
+    questions: QuizQuestion[];
+  };
+  // Adding missing site config properties for extended sections
   aiSystems: {
     headline: string;
     highlight: string;
-    services: AISystemService[];
+    services: {
+      icon: string;
+      title: string;
+      description: string;
+    }[];
     stats: {
       value: string;
       label: string;
@@ -107,20 +148,6 @@ export interface SiteConfig {
     highlight: string;
     rows: ComparisonRow[];
   };
-  howItWorks: {
-    title: string;
-    highlight: string;
-    steps: {
-      step: string;
-      title: string;
-      desc: string;
-    }[];
-  };
-  results: {
-    title: string;
-    highlight: string;
-    testimonials: Testimonial[];
-  };
   trust: {
     items: {
       icon: string;
@@ -130,19 +157,5 @@ export interface SiteConfig {
       label: string;
       text: string;
     };
-  };
-  finalCta: {
-    headline: string;
-    highlight: string;
-    subheadline: string;
-    ctaText: string;
-    slotsRemaining: number;
-    availabilityLabel: string;
-  };
-  quiz: {
-    title: string;
-    subheadline: string;
-    ctaText: string;
-    questions: QuizQuestion[];
   };
 }

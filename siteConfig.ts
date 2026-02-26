@@ -1,9 +1,6 @@
 
 import { SiteConfig } from './types';
 
-/**
- * CENTRAL SITE CONFIGURATION - Refined AI Marketing Automation Flow
- */
 export const siteConfig: SiteConfig = {
   brand: {
     name: "MasDevs LLC",
@@ -16,33 +13,36 @@ export const siteConfig: SiteConfig = {
   },
   navigation: [
     { label: "The Leak", targetId: "problem" },
-    { label: "Industries", targetId: "niches" },
+    { label: "Proof", targetId: "results" },
     { label: "Value", targetId: "value-props" },
-    { label: "Our System", targetId: "solution" },
-    { label: "Results", targetId: "results" }
+    { label: "Process", targetId: "how-it-works" }
   ],
   hero: {
-    eyebrow: "Trusted by SMBs in Law, Real Estate, Healthcare & Home Services",
-    headline: "Stop Losing High-Value Leads. Increase Booked Appointments by up to 35% with AI Marketing Automation.",
-    subheadline: "Stop relying on slow follow-ups and manual systems. Start using AI-powered marketing automation that responds in under 30 seconds, nurtures every lead, and books appointments around the clock.",
-    ctaText: "Book Free Strategy Call",
-    socialProofText: "Rated by Growing Businesses"
+    eyebrow: "Rated 4.9/5 by 100+ Service Businesses",
+    headline: "Stop Losing High-Value Leads. Increase Booked Appointments by 35% in 30 Days with AI Marketing Automation.",
+    subheadline: "Most businesses reply in hours. Our system replies in under 30 seconds, follows up automatically, and books appointments for you 24/7.",
+    ctaText: "Get My Free Lead Audit",
+    socialProofText: "⭐⭐⭐⭐⭐ Trust Score",
+    trustLogos: [
+      "https://iili.io/JpG6t2p.png",
+      "https://iili.io/JpG6pBf.png",
+      "https://iili.io/JpG63MG.png",
+      "https://iili.io/JpG6X4S.png"
+    ]
   },
   problem: {
-    headline: "Your Business is Generating Leads...",
-    highlight: "But Losing Revenue.",
-    subheadline: "You're paying for marketing — but your system is leaking money every day. Over 40% of leads contact another company if they don’t get a fast reply.",
+    headline: "Your Business is Getting Leads…",
+    highlight: "But Revenue Is Leaking Every Day.",
+    subheadline: "You don’t need more ads. You need a system that never forgets and never sleeps.",
     statCallout: {
-      stat: "The Leaky Bucket Problem",
-      subtext: "It can cost service businesses thousands per month in lost opportunities."
+      stat: "The Reality Check",
+      subtext: "40% of customers choose the business that responds first."
     },
     items: [
-      { icon: "ShieldAlert", title: "40% Lead Attrition", desc: "Leads contact another company immediately if they don't get a fast reply." },
-      { icon: "PhoneOff", title: "Unanswered After-Hours", desc: "Calls go completely unanswered once the office closes for the day." },
-      { icon: "Clock3", title: "Hours/Days Wait Time", desc: "Form leads often wait hours or days for a response, losing interest." },
-      { icon: "Users", title: "Follow-ups Forgotten", desc: "Manually keeping track of prospects is impossible. Leads die in your CRM." },
-      { icon: "Database", title: "Ghosted Appointments", desc: "High no-show rates because reminder systems are manual or non-existent." },
-      { icon: "TrendingDown", title: "Admin Overload", desc: "Your team wastes 90% of their time on admin tasks instead of closing." }
+      { icon: "ShieldAlert", title: "40% Lead Attrition", desc: "Customers choose the business that responds first. Speed is everything." },
+      { icon: "PhoneOff", title: "Wasted Paid Leads", desc: "Missed calls mean you are paying for leads that go straight to competitors." },
+      { icon: "Clock3", title: "Slow Follow-ups", desc: "Waiting hours or days to reply sends your customers to the next person on Google." },
+      { icon: "TrendingDown", title: "Schedule Destruction", desc: "No-shows destroy your schedule and cash flow. Manual reminders aren't enough." }
     ]
   },
   niches: {
@@ -50,98 +50,59 @@ export const siteConfig: SiteConfig = {
     headline: "Industries We Scale",
     subheadline: "If your business depends on leads and appointments, this system is built for you.",
     items: [
-      { title: "Personal Injury Lawyers", tag: "24/7 INTAKE", description: "Instant speed-to-lead for high-value accident cases before they call the next firm.", impactValue: "Never miss high-value cases.", icon: "⚖️" },
-      { title: "Real Estate Agents", tag: "NURTURE FLOWS", description: "Automated nurturing that turns cold leads into listings in days, not months.", impactValue: "listings in days, not months.", icon: "🏡" },
+      { title: "Personal Injury Lawyers", tag: "24/7 INTAKE", description: "Instant speed-to-lead for accident cases before they call the next firm.", impactValue: "Never miss high-value cases.", icon: "⚖️" },
+      { title: "Real Estate Agents", tag: "DATABASE REACTIVATION", description: "Turn your old database into fresh listings with intelligent AI follow-ups.", impactValue: "12+ fresh listings from 'dead' leads.", icon: "🏡" },
       { title: "Dental & Med Spas", tag: "NO-SHOW REDUCTION", description: "Reduce no-shows by up to 60% with smart multi-channel reminders.", impactValue: "Up to 60% fewer no-shows.", icon: "💉" },
       { title: "HVAC & Roofing", tag: "PRE-QUALIFICATION", description: "Pre-qualify leads so your team avoids junk jobs and focus on big contracts.", impactValue: "Avoid junk jobs automatically.", icon: "🛠️" },
       { title: "Insurance Agencies", tag: "REVENUE RECOVERY", description: "Reactivate old leads and increase close rates with automated follow-ups.", impactValue: "Increase close rates instantly.", icon: "🛡️" },
       { title: "Cleaning Companies", tag: "AUTO-SCHEDULING", description: "Instant response and automated scheduling for more daily bookings.", impactValue: "More daily bookings secured.", icon: "🧹" }
     ]
   },
-  valueProps: {
-    headline: "Outcome-Driven",
-    highlight: "Benefits",
-    subheadline: "A complete system that manages leads from first contact to booked appointment.",
-    items: [
-      { icon: "Zap", title: "Never Miss Another Lead", description: "100% of calls, forms, and messages get an instant response in under 30 seconds." },
-      { icon: "UserPlus", title: "Turn Old Leads Into Revenue", description: "Businesses re-engage up to 30–50% of ignored leads with automation." },
-      { icon: "Shield", title: "Reduce No-Shows by 60%", description: "Automated reminders via SMS, Email, and WhatsApp ensure high attendance." },
-      { icon: "TrendingDown", title: "Save 90% of Admin Work", description: "Your team stops chasing leads and updating spreadsheets — everything is auto-synced." },
-      { icon: "BarChart3", title: "See Revenue Clearly", description: "Know exactly how many leads, bookings, and deals you have at any time in one dashboard." },
-      { icon: "CheckCircle2", title: "Only Talk to Serious Prospects", description: "Unqualified inquiries are filtered automatically so you only talk to buyers." }
+  results: {
+    title: "Undeniable",
+    highlight: "Proof",
+    testimonials: [
+      { name: "James R.", niche: "Attorney", quote: "We were losing 30% of accident leads. Now we book consultations 24/7. ROI was instant.", resultBadge: "60% fewer no-shows in 2 weeks", avatar: "https://i.pravatar.cc/150?u=james" },
+      { name: "Sarah M.", niche: "Real Estate", quote: "500 dead leads turned into 12 listings in just 10 days. The AI is smarter than our old follow-up team.", resultBadge: "12 booked jobs from old leads", avatar: "https://i.pravatar.cc/150?u=sarah" },
+      { name: "Dr. Linda K.", niche: "Med Spa", quote: "Our no-show rate dropped by 60%. It’s like having a receptionist who never sleeps.", resultBadge: "Now booking appointments 24/7", avatar: "https://i.pravatar.cc/150?u=linda" },
+      { name: "Mark T.", niche: "HVAC CEO", quote: "We respond in 5 seconds now. We win the job before the competitor even hears the phone ring.", resultBadge: "Saved 10+ hours per week", avatar: "https://i.pravatar.cc/150?u=mark" }
     ]
   },
-  aiSystems: {
-    headline: "The Complete",
-    highlight: "Automation System.",
-    services: [
-      { title: "Instant 30s Response", description: "AI agents respond to every inquiry instantly, qualifying prospects before they reach your team.", icon: "Cpu" },
-      { title: "7-12 Multi-Touch Nurture", description: "Follows up automatically 7–12 times until the lead books or says no.", icon: "Zap" },
-      { title: "Autonomous Booking", description: "Books qualified appointments directly into your calendar without a single human phone call.", icon: "Layout" }
-    ],
-    stats: {
-      value: "24/7",
-      label: "Digital Assistant",
-      description: "A digital sales assistant that never sleeps, never calls in sick, and never misses a follow-up."
-    }
-  },
-  techStack: {
-    title: "Capabilities",
-    subtitle: "Premium automation tech, custom-built for revenue results.",
-    items: ["Instant Booking", "Database Reactivation", "Multi-Channel Nurturing", "Lead Qualification", "Review Automation", "Revenue Dashboards"]
-  },
-  comparison: {
-    title: "Your Business Today",
-    highlight: "vs With MasDevs",
-    rows: [
-      { feature: "Response Speed", typical: "Replies in hours or never", masdevs: "Response in under 30 seconds" },
-      { feature: "Follow-up", typical: "Manual follow-ups", masdevs: "Automated follow-ups 24/7" },
-      { feature: "Lead Capture", typical: "Missed calls = lost sales", masdevs: "100% of leads captured" },
-      { feature: "Organization", typical: "Messy tools & notes", masdevs: "One clear revenue system" },
-      { feature: "Attendance", typical: "High no-show rate", masdevs: "Up to 60% fewer no-shows" },
-      { feature: "Availability", typical: "Business stops after hours", masdevs: "System runs 24/7" }
+  valueProps: {
+    headline: "How Our AI Marketing Automation",
+    highlight: "System Works",
+    subheadline: "Outcome driven results, no tech jargon.",
+    items: [
+      { icon: "Zap", title: "Instant Response", description: "Every call, form & message gets answered in under 30 seconds." },
+      { icon: "MessageSquare", title: "Automatic Follow-Ups", description: "Leads receive 7–12 smart messages until they book or say no." },
+      { icon: "CheckCircle2", title: "Smart Filtering", description: "Only serious, high-value customers reach your team." },
+      { icon: "Layout", title: "Auto Booking", description: "Customers book directly into your calendar without staff chasing them." }
     ]
   },
   howItWorks: {
-    title: "Our Simple",
-    highlight: "3-Step Process",
+    title: "How It",
+    highlight: "Works",
     steps: [
-      { step: "01", title: "Free Strategy Call", desc: "15 minutes to review your current lead flow and growth goals." },
-      { step: "02", title: "Diagnose The Leak", desc: "We identify exactly where you're losing the most revenue today." },
-      { step: "03", title: "Deploy Your System", desc: "A custom automation system launched in days, not months." }
+      { step: "01", title: "Free Audit", desc: "We analyze exactly where your leads are leaking and find the hidden revenue." },
+      { step: "02", title: "Custom Setup", desc: "We build your bespoke AI assistant and automation workflows in under 7 days." },
+      { step: "03", title: "Launch", desc: "Your system goes live 24/7. Every single lead is now caught and nurtured instantly." },
+      { step: "04", title: "Grow", desc: "You focus on providing world-class service; we handle the bookings automatically." }
     ]
   },
-  results: {
-    title: "Client",
-    highlight: "Success Metrics",
-    testimonials: [
-      { name: "James R.", niche: "Personal Injury Attorney", quote: "We were losing nearly 30% of accident leads. Now we book consultations 24/7. Game changer." },
-      { name: "Sarah M.", niche: "Real Estate Broker", quote: "500 dead leads turned into 12 listings in just 10 days. ROI was instant." },
-      { name: "Dr. Linda K.", niche: "Aesthetic Clinic Owner", quote: "Our no-show rate dropped by 60%. It’s like having a receptionist who never sleeps." },
-      { name: "Mark T.", niche: "HVAC CEO", quote: "We saved dozens of hours every month by stopping junk appointments." },
-      { name: "David L.", niche: "Insurance Agency Owner", quote: "We reactivated 400 'ghosted' quotes using the AI bot. We closed 18 policies in the first month alone." },
-      { name: "Monica P.", niche: "Commercial Cleaning CEO", quote: "The AI handles instant quotes while my teams are on-site. Booking volume increased by 45%." },
-      { name: "Robert H.", niche: "Roofing Contractor", quote: "The AI hits our leads in 5 seconds; we’re winning 3x more jobs from the same marketing spend." },
-      { name: "Elena S.", niche: "Med Spa Director", quote: "The AI captures Instagram DMs and books them automatically. 100% hands-free revenue." }
-    ]
-  },
-  trust: {
+  faqs: {
+    title: "Common Questions",
     items: [
-      { icon: "CheckCircle2", text: "Free Strategy Call" },
-      { icon: "ShieldCheck", text: "Month-to-Month Partnership" },
-      { icon: "ArrowRight", text: "Secure Infrastructure" },
-      { icon: "ShieldCheck", text: "Satisfaction Guaranteed" }
-    ],
-    guarantee: {
-      label: "RISK REVERSAL",
-      text: "You risk nothing. You gain a system that works 24/7 and grows your revenue automatically. Start plugging your leaks today."
-    }
+      { question: "How long does setup take?", answer: "We can have your custom system built and launched in under 7 days." },
+      { question: "Do I need to replace my current system?", answer: "No, we connect directly to what you already use or provide a superior one if needed." },
+      { question: "Is my data safe?", answer: "Absolutely. We use bank-level encryption and follow strict data privacy protocols." },
+      { question: "Is there a long-term contract?", answer: "No, you can cancel anytime. We believe in earning your business every single month." }
+    ]
   },
   finalCta: {
     headline: "Ready to Stop Losing",
     highlight: "High-Value Leads?",
-    subheadline: "Every day without automation costs you money. Your competitors are already responding faster and booking more appointments.",
-    ctaText: "Book Your Free Strategy Call Now",
+    subheadline: "30-second response • 35% more bookings • 60% fewer no-shows",
+    ctaText: "Book Your Free Strategy Call",
     slotsRemaining: 4,
     availabilityLabel: "Available Today"
   },
@@ -155,5 +116,51 @@ export const siteConfig: SiteConfig = {
       { id: 3, question: "What is your biggest bottleneck?", options: ["No-shows", "Slow follow-up", "Admin work", "Lead quality"] },
       { id: 4, question: "Would you like a free audit of your lead flow?", options: ["Yes, please", "Tell me more", "I'm not sure", "Absolutely"] }
     ]
+  },
+  // Data for additional sections to resolve configuration errors
+  aiSystems: {
+    headline: "Our Core",
+    highlight: "AI Systems",
+    services: [
+      { icon: "Cpu", title: "AI Booking Agents", description: "24/7 digital employees for marketing qualification & booking that never sleep." },
+      { icon: "Layout", title: "Marketing Dashboards", description: "Real-time visibility that shows exactly which ads are booking meetings." },
+      { icon: "Smartphone", title: "Nurture Engines", description: "Autonomous multi-channel follow-ups that stay top-of-mind with prospects." }
+    ],
+    stats: {
+      value: "35%",
+      label: "Average Growth",
+      description: "Increase in booked appointments for our partners within the first 30 days of implementation."
+    }
+  },
+  techStack: {
+    title: "Stack",
+    subtitle: "Powering your infrastructure",
+    items: [
+      "AI Booking Agents", "Automated Nurture Engines", "Database Reactivation", 
+      "Voice AI Intake", "SMS Automation", "WhatsApp Integration", "CRM Optimization"
+    ]
+  },
+  comparison: {
+    title: "Typical vs.",
+    highlight: "MasDevs",
+    rows: [
+      { feature: "Speed to Lead", typical: "Missed leads", masdevs: "Instant response" },
+      { feature: "Follow-up Consistency", typical: "Manual follow-ups", masdevs: "Automated follow-ups" },
+      { feature: "No-Show Rate", typical: "High no-shows", masdevs: "60% fewer no-shows" },
+      { feature: "Visibility", typical: "Guessing", masdevs: "Clear visibility" },
+      { feature: "Availability", typical: "Business stops at night", masdevs: "Runs 24/7" }
+    ]
+  },
+  trust: {
+    items: [
+      { icon: "CheckCircle2", text: "Verified Results" },
+      { icon: "ShieldCheck", text: "Bank-Grade Security" },
+      { icon: "ArrowRight", text: "Proprietary Tech" },
+      { icon: "ShieldCheck", text: "ROI Focused" }
+    ],
+    guarantee: {
+      label: "Performance Guarantee",
+      text: "If we don't increase your appointment volume within the first 30 days, we work for free until we do. Zero risk to your business."
+    }
   }
 };
