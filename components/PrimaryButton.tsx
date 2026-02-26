@@ -23,7 +23,7 @@ export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
 }) => (
   <button 
     onClick={onClick}
-    className={`bg-[#30f797] text-[#121420] py-4 px-8 rounded-2xl md:rounded-3xl transform transition-all hover:scale-[1.02] active:scale-95 shadow-[0_0_20px_rgba(48,247,151,0.3)] flex flex-col items-center justify-center gap-0.5 group ${className}`}
+    className={`bg-[#30f797] text-[#121420] py-3 md:py-4 px-6 md:px-8 rounded-2xl md:rounded-3xl transform transition-all hover:scale-[1.02] active:scale-95 shadow-[0_0_20px_rgba(48,247,151,0.3)] flex flex-col items-center justify-center gap-0.5 group ${className}`}
   >
     <span className="text-sm md:text-xl font-black tracking-tight leading-tight uppercase">{children}</span>
     {subText && (

@@ -23,7 +23,7 @@ export const ResultsSection: React.FC = () => {
           {wallTestimonials.map((t, i) => (
             <div 
               key={i} 
-              className="relative p-10 md:p-12 rounded-[2.5rem] border border-white/5 bg-[#1A1D2D] transition-all group shadow-2xl flex flex-col justify-between overflow-hidden"
+              className="relative p-8 md:p-12 rounded-[2.5rem] border border-white/5 bg-[#1A1D2D] transition-all group shadow-2xl flex flex-col justify-between overflow-hidden"
             >
               <div className="absolute top-0 right-0 p-8 opacity-[0.03] text-white">
                 <Quote size={120} />

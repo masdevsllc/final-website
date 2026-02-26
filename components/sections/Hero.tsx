@@ -13,29 +13,29 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
   const [email, setEmail] = useState('');
 
   return (
-    <section className="relative pt-32 pb-16 md:pb-24 px-6 overflow-hidden min-h-screen flex flex-col justify-center z-10">
+    <section className="relative pt-24 md:pt-32 pb-8 md:pb-24 px-6 overflow-x-hidden min-h-screen flex flex-col md:justify-center z-10">
       {/* Visual Background Elements */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-6xl pointer-events-none opacity-20">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-6xl pointer-events-none opacity-20 overflow-hidden">
         <div className="absolute top-10 md:top-20 left-10 w-48 md:w-64 h-48 md:h-64 bg-[#30f797] rounded-full blur-[80px] md:blur-[120px]"></div>
         <div className="absolute bottom-10 md:bottom-20 right-10 w-64 md:w-96 h-64 md:h-96 bg-blue-600 rounded-full blur-[100px] md:blur-[150px]"></div>
       </div>
 
       <div className="container mx-auto max-w-6xl relative z-10">
         {/* Social Proof Stack 1 - Top Left Branding */}
-        <div className="flex justify-start mb-8 animate-float">
-          <div className="bg-white/5 backdrop-blur-md px-5 py-2.5 rounded-2xl border border-white/10 flex items-center gap-3">
+        <div className="flex justify-start mb-4 md:mb-8 animate-float">
+          <div className="bg-white/5 backdrop-blur-md px-3 py-1.5 md:px-5 md:py-2.5 rounded-2xl border border-white/10 flex items-center gap-3">
              <div className="flex text-[#30f797]">
-              {[1, 2, 3, 4, 5].map(i => <Star key={i} size={14} fill="currentColor" />)}
+              {[1, 2, 3, 4, 5].map(i => <Star key={i} size={12} fill="currentColor" />)}
             </div>
-            <p className="text-[10px] font-black uppercase tracking-widest text-white/80">
+            <p className="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-white/80">
               {hero.eyebrow}
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-center">
           <div className="lg:col-span-7 text-left">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tighter mb-8 italic uppercase">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tighter mb-4 md:mb-8 italic uppercase">
               {hero.headline.split(' ').map((word, i) => (
                 <span key={i} className={word.includes('35%') || word.includes('Automation') ? 'text-[#30f797]' : 'text-white'}>
                   {word}{' '}
@@ -43,38 +43,42 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
               ))}
             </h1>
 
-            <p className="text-lg md:text-2xl text-white/60 mb-10 font-medium leading-relaxed max-w-2xl border-l-2 border-[#30f797]/30 pl-6">
+            <p className="text-base md:text-2xl text-white/60 mb-6 md:mb-10 font-medium leading-relaxed max-w-2xl border-l-2 border-[#30f797]/30 pl-4 md:pl-6">
               {hero.subheadline}
             </p>
 
             {/* Progressive Disclosure CTA */}
-            <div className="flex flex-col sm:flex-row items-stretch gap-4 mb-8 max-w-3xl">
-              <div className="relative flex-grow w-full sm:w-auto">
-                <div className="absolute left-5 top-1/2 -translate-y-1/2 text-[#30f797] opacity-60">
-                  <Mail size={20} />
+            <div className="flex flex-col sm:flex-row items-stretch gap-3 md:gap-4 mb-6 md:mb-8 max-w-3xl">
+              <div className="relative flex-grow w-full sm:w-auto h-12 md:h-auto">
+                <div className="absolute left-4 md:left-5 top-1/2 -translate-y-1/2 text-[#30f797] opacity-60">
+                  <Mail size={16} md:size={18} />
                 </div>
                 <input 
                   type="email" 
                   placeholder="Enter Work Email" 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full h-full bg-white/5 border border-white/10 rounded-2xl md:rounded-3xl py-4 md:py-5 pl-14 pr-6 text-white placeholder:text-white/20 focus:outline-none focus:border-[#30f797]/50 transition-all text-base md:text-lg font-bold backdrop-blur-sm"
+                  className="w-full h-full bg-white/5 border border-white/10 rounded-2xl md:rounded-3xl py-3 md:py-5 pl-10 md:pl-14 pr-6 text-white placeholder:text-white/20 focus:outline-none focus:border-[#30f797]/50 transition-all text-xs md:text-lg font-bold backdrop-blur-sm"
                 />
               </div>
               <PrimaryButton 
                 onClick={onCtaClick} 
-                className="w-full sm:w-auto min-w-[240px]"
+                className="w-full sm:w-auto min-w-[180px] md:min-w-[240px]"
                 subText="15-min call • Zero setup fees"
               >
                 {hero.ctaText}
               </PrimaryButton>
             </div>
 
-            <div className="flex items-center gap-4 text-white/30 text-[10px] font-black uppercase tracking-[0.3em] mb-12">
-              <span>15-minute strategy call</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-white/10"></span>
-              <span>No credit card</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-white/10"></span>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 md:gap-4 text-white/30 text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] mb-8 md:mb-12">
+              <div className="flex items-center gap-2">
+                <span>15-minute strategy call</span>
+                <span className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-white/10"></span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span>No credit card</span>
+                <span className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-white/10"></span>
+              </div>
               <span>No obligation</span>
             </div>
 

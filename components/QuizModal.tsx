@@ -53,33 +53,33 @@ export const QuizModal: React.FC<QuizModalProps> = ({ onClose, onAuditClaim }) =
   };
 
   return (
-    <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 md:p-6 bg-[#121420]/95 backdrop-blur-xl">
-      <div className="bg-[#1A1D2D] border border-white/10 p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] max-w-2xl w-full relative shadow-[0_30px_100px_rgba(0,0,0,0.8)] overflow-hidden">
+    <div className="fixed inset-0 z-[60] flex items-center justify-center p-2 sm:p-4 md:p-6 bg-[#121420]/98 backdrop-blur-2xl overflow-y-auto">
+      <div className="bg-[#1A1D2D] border border-white/10 p-5 md:p-12 rounded-[1.5rem] md:rounded-[3rem] max-w-2xl w-full relative shadow-[0_30px_100px_rgba(0,0,0,0.8)] my-auto">
         {/* Background Accent */}
         <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#30f797]/5 rounded-full blur-[80px] pointer-events-none"></div>
         
         {/* Close Button - Positioned with distance */}
         <button 
           onClick={onClose} 
-          className="absolute top-8 right-8 md:top-10 md:right-10 text-white/40 hover:text-white transition-colors z-20"
+          className="absolute top-4 right-4 md:top-10 md:right-10 text-white/40 hover:text-white transition-colors z-20"
           aria-label="Close modal"
         >
-          <XCircle size={32} />
+          <XCircle size={24} md:size={32} />
         </button>
 
         {!finished ? (
           <div className="relative z-10">
-            <div className="mb-10">
+            <div className="mb-6 md:mb-10">
               {/* Header Container - Added pr-12 to ensure progress text doesn't hit the close button */}
-              <div className="flex justify-between items-end mb-4 pr-12 md:pr-16">
-                <span className="text-[#30f797] font-black text-[10px] md:text-xs tracking-[0.3em] uppercase italic">
+              <div className="flex justify-between items-end mb-3 md:mb-4 pr-8 md:pr-16">
+                <span className="text-[#30f797] font-black text-[8px] md:text-xs tracking-[0.3em] uppercase italic">
                   Analyzing Business Infrastructure
                 </span>
-                <span className="text-white/30 font-bold text-xs whitespace-nowrap">
+                <span className="text-white/30 font-bold text-[10px] md:text-xs whitespace-nowrap">
                   {currentQuestion + 1} / {quiz.questions.length}
                 </span>
               </div>
-              <div className="h-1.5 bg-white/5 w-full rounded-full overflow-hidden border border-white/5">
+              <div className="h-1 bg-white/5 w-full rounded-full overflow-hidden border border-white/5">
                 <div 
                   className="h-full bg-[#30f797] transition-all duration-700 ease-out shadow-[0_0_15px_rgba(48,247,151,0.5)]" 
                   style={{ width: `${((currentQuestion + 1) / quiz.questions.length) * 100}%` }}
@@ -87,23 +87,23 @@ export const QuizModal: React.FC<QuizModalProps> = ({ onClose, onAuditClaim }) =
               </div>
             </div>
 
-            <h3 className="text-2xl md:text-4xl font-black mb-10 uppercase italic tracking-tighter leading-tight text-white/90">
+            <h3 className="text-lg md:text-4xl font-black mb-6 md:mb-10 uppercase italic tracking-tighter leading-tight text-white/90">
               {quiz.questions[currentQuestion].question}
             </h3>
 
-            <div className="grid gap-4">
+            <div className="grid gap-2 md:gap-4">
               {quiz.questions[currentQuestion].options.map((opt, i) => (
                 <button 
                   key={i} 
                   onClick={() => handleSelect(i)} 
-                  className="group relative p-6 text-left rounded-2xl border border-white/10 hover:border-[#30f797]/40 hover:bg-[#30f797]/5 transition-all"
+                  className="group relative p-3 md:p-6 text-left rounded-xl md:rounded-2xl border border-white/10 hover:border-[#30f797]/40 hover:bg-[#30f797]/5 transition-all"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="font-black uppercase tracking-wide text-sm md:text-base text-white/60 group-hover:text-white transition-colors">
+                    <span className="font-black uppercase tracking-wide text-[10px] md:text-base text-white/60 group-hover:text-white transition-colors">
                       {opt}
                     </span>
-                    <div className="w-5 h-5 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#30f797]/50 transition-colors">
-                      <div className="w-2 h-2 rounded-full bg-[#30f797] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="w-3.5 h-3.5 md:w-5 md:h-5 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#30f797]/50 transition-colors">
+                      <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#30f797] opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </div>
                   </div>
                 </button>
@@ -111,53 +111,53 @@ export const QuizModal: React.FC<QuizModalProps> = ({ onClose, onAuditClaim }) =
             </div>
           </div>
         ) : (
-          <div className="text-center py-4 relative z-10">
+          <div className="text-center py-1 md:py-4 relative z-10">
             {/* Success Header */}
-            <div className="flex flex-col items-center mb-10">
-              <div className="w-20 h-20 bg-[#30f797]/10 rounded-full flex items-center justify-center mb-6 border border-[#30f797]/30 shadow-[0_0_30px_rgba(48,247,151,0.1)]">
-                <CheckCircle2 size={40} className="text-[#30f797]" />
+            <div className="flex flex-col items-center mb-6 md:mb-10">
+              <div className="w-12 h-12 md:w-20 md:h-20 bg-[#30f797]/10 rounded-full flex items-center justify-center mb-3 md:mb-6 border border-[#30f797]/30 shadow-[0_0_30px_rgba(48,247,151,0.1)]">
+                <CheckCircle2 size={24} md:size={40} className="text-[#30f797]" />
               </div>
-              <h3 className="text-3xl md:text-5xl font-black mb-2 uppercase italic tracking-tighter">
+              <h3 className="text-xl md:text-5xl font-black mb-1 md:mb-2 uppercase italic tracking-tighter">
                 {quiz.title}
               </h3>
-              <p className="text-white/40 text-xs md:text-sm font-black uppercase tracking-[0.4em]">Audit Successful</p>
+              <p className="text-white/40 text-[8px] md:text-sm font-black uppercase tracking-[0.4em]">Audit Successful</p>
             </div>
 
             {/* Score Card Dashboard */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-              <div className="p-8 rounded-[2rem] bg-red-500/[0.03] border border-red-500/10 flex flex-col items-center justify-center">
-                <div className="flex items-center gap-2 mb-3">
-                  <AlertTriangle size={14} className="text-red-500/50" />
-                  <span className="text-red-500/50 text-[10px] font-black uppercase tracking-widest">Leaky Bucket Score</span>
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-2 md:gap-4 mb-6 md:mb-12">
+              <div className="p-4 md:p-8 rounded-2xl md:rounded-[2rem] bg-red-500/[0.03] border border-red-500/10 flex flex-col items-center justify-center">
+                <div className="flex items-center gap-1 md:gap-2 mb-1 md:mb-3">
+                  <AlertTriangle size={10} md:size={14} className="text-red-500/50" />
+                  <span className="text-red-500/50 text-[6px] md:text-[10px] font-black uppercase tracking-widest">Leakage</span>
                 </div>
-                <div className="text-5xl md:text-6xl font-black text-red-500 tracking-tighter mb-1">
+                <div className="text-2xl md:text-6xl font-black text-red-500 tracking-tighter mb-0.5 md:mb-1">
                   {scoreData.leakage}%
                 </div>
-                <span className="text-white/30 text-[10px] font-bold uppercase">Leakage Found</span>
+                <span className="text-white/30 text-[6px] md:text-[10px] font-bold uppercase">Score</span>
               </div>
 
-              <div className="p-8 rounded-[2rem] bg-[#30f797]/[0.03] border border-[#30f797]/10 flex flex-col items-center justify-center">
-                <div className="flex items-center gap-2 mb-3">
-                  <TrendingUp size={14} className="text-[#30f797]/50" />
-                  <span className="text-[#30f797]/50 text-[10px] font-black uppercase tracking-widest">Revenue Impact</span>
+              <div className="p-4 md:p-8 rounded-2xl md:rounded-[2rem] bg-[#30f797]/[0.03] border border-[#30f797]/10 flex flex-col items-center justify-center">
+                <div className="flex items-center gap-1 md:gap-2 mb-1 md:mb-3">
+                  <TrendingUp size={10} md:size={14} className="text-[#30f797]/50" />
+                  <span className="text-[#30f797]/50 text-[6px] md:text-[10px] font-black uppercase tracking-widest">Impact</span>
                 </div>
-                <div className="text-5xl md:text-6xl font-black text-[#30f797] tracking-tighter mb-1">
+                <div className="text-2xl md:text-6xl font-black text-[#30f797] tracking-tighter mb-0.5 md:mb-1">
                   +{scoreData.opportunity}%
                 </div>
-                <span className="text-white/30 text-[10px] font-bold uppercase">Growth Potential</span>
+                <span className="text-white/30 text-[6px] md:text-[10px] font-bold uppercase">Potential</span>
               </div>
             </div>
 
             {/* Opportunity Text */}
-            <div className="max-w-md mx-auto mb-12">
-              <p className="text-lg md:text-xl text-white/70 font-medium leading-relaxed">
+            <div className="max-w-md mx-auto mb-6 md:mb-12">
+              <p className="text-xs md:text-xl text-white/70 font-medium leading-relaxed">
                 Your current infrastructure is losing high-value leads. Our systems can plug these leaks and scale your revenue <span className="text-[#30f797] font-black italic">immediately.</span>
               </p>
             </div>
 
             {/* Centered CTA */}
             <div className="flex justify-center">
-              <PrimaryButton onClick={onAuditClaim}>
+              <PrimaryButton onClick={onAuditClaim} className="w-full md:w-auto text-sm md:text-base">
                 {quiz.ctaText}
               </PrimaryButton>
             </div>

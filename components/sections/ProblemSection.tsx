@@ -29,7 +29,7 @@ export const ProblemSection: React.FC = () => {
           <div className="mb-20 md:mb-32">
             <div className="relative group max-w-4xl mx-auto">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#30f797]/50 to-[#30f797]/10 rounded-[2rem] blur-xl opacity-20 animate-pulse"></div>
-              <div className="relative flex flex-col md:flex-row items-center gap-8 p-8 md:p-12 rounded-[2rem] bg-[#121420] border border-[#30f797]/20 shadow-2xl">
+              <div className="relative flex flex-col md:flex-row items-center gap-8 p-6 md:p-12 rounded-[2rem] bg-[#121420] border border-[#30f797]/20 shadow-2xl">
                 <div className="flex-shrink-0 w-20 h-20 bg-[#30f797]/10 rounded-2xl flex items-center justify-center border border-[#30f797]/20 shadow-[0_0_20px_rgba(48,247,151,0.1)]">
                   <Timer className="text-[#30f797] w-10 h-10" />
                 </div>
@@ -68,7 +68,7 @@ export const ProblemSection: React.FC = () => {
             return (
               <div 
                 key={i} 
-                className={`flex flex-col items-center text-center sm:items-start sm:text-left p-8 md:p-10 rounded-3xl border ${item.isSolution ? 'border-[#30f797]/30 bg-[#30f797]/5' : 'border-white/10 bg-white/5'} backdrop-blur-sm transition-all hover:bg-white/[0.07]`}
+                className={`flex flex-col items-center text-center sm:items-start sm:text-left p-6 md:p-10 rounded-3xl border ${item.isSolution ? 'border-[#30f797]/30 bg-[#30f797]/5' : 'border-white/10 bg-white/5'} backdrop-blur-sm transition-all hover:bg-white/[0.07]`}
               >
                 <div className="mb-6">
                   <Icon className={item.isSolution ? "text-[#30f797]" : "text-red-500/50"} size={28} />
