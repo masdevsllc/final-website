@@ -1,6 +1,7 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { siteConfig } from './siteConfig';
 
 // Core Components
 import { Navbar } from './components/Navbar';
@@ -23,6 +24,20 @@ import { Footer } from './components/sections/Footer';
  */
 const App: React.FC = () => {
   const [showQuiz, setShowQuiz] = useState(false);
+
+  useEffect(() => {
+    // Dynamically set favicon from siteConfig
+    if (siteConfig.brand.faviconUrl) {
+      const link: HTMLLinkElement = (document.querySelector("link[rel*='icon']") as HTMLLinkElement) || document.createElement('link');
+      link.type = 'image/x-icon';
+      link.rel = 'icon';
+      link.href = siteConfig.brand.faviconUrl;
+      document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    
+    // Set Page Title
+    document.title = `${siteConfig.brand.name} | Fix Your Leaky Bucket with AI`;
+  }, []);
 
   const scrollToId = (id: string) => {
     const el = document.getElementById(id);
