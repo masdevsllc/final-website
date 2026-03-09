@@ -7,7 +7,7 @@ export const siteConfig: SiteConfig = {
     firstName: "MAS",
     lastName: "DEVS",
     logoUrl: "https://iili.io/qJfKdDG.png",
-    faviconUrl: "https://drive.google.com/uc?id=17zhWLrmG2nnqszf9E_dGeK1mdE-MgDai",
+    faviconUrl: "https://freeimage.host/i/qTtQczv",
     ceo: "Waqas Ahmed",
     location: "Missouri, USA"
   },
